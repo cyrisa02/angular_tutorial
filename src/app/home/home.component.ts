@@ -8,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  headername = "Angular Tutorial";
+
+  isdisabled: boolean = false;
+
+  colorname = "red";
+
+  classname = 'headclass';
+  stylevalue = { "color": "yellow", "font-size": "60px" };
 
   ngOnInit(): void {
+  }
+
+  Functionclick(name: string) {
+    alert(name);
   }
 
 }
