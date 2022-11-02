@@ -305,7 +305,7 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar" role="banner" *ngIf="isMenuVisible">
   <img
     width="40"
     alt="Angular Logo"
@@ -317,6 +317,7 @@
   <div class="spacer"></div>
   <a routerLink="login">Login</a>
   <a routerLink="access/register">Register</a>
+  <a routerLink="access/register">Logout</a>
 
   <a
     aria-label="Angular on YouTube"

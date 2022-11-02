@@ -22,3 +22,10 @@ Style Binding [style.color] ou [style.font-size] entre le html et le ts
 Material +  npm install alertifyjs --save
 + couper le serveur
 + npm start 
+
+----------------------------
+
+pour la connexion des users, création d'un service 
+ng g s Service/user  
+inclure le service import { HttpClientModule } from '@angular/common/http'; dans le appModule général
+
