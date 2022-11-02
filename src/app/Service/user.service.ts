@@ -12,4 +12,12 @@ export class UserService {
     return this.http.post('https://localhost:44308/User/Authenticate', inputdata);
 
   }
+
+  IsLoogedIn() {
+    return localStorage.getItem('token') != null;
+  }
+
+  GetToken() {
+    return localStorage.getItem('token') != null ? localStorage.getItem('token') : '';
+  }
 }
