@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 export interface PeriodicElement {
@@ -26,12 +27,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  //Voir la vidéo à 2h51m50s pour injection du service UserMaster
   constructor() { }
 
   ngOnInit(): void {
   }
+  @ViewChild(MatPaginator) paginator !: MatPaginator;
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'Action'];
   dataSource = ELEMENT_DATA;
+
 }
